@@ -5,6 +5,7 @@
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
 html {
   line-height: 1.15;
   /* 1 */
@@ -311,12 +312,59 @@ html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box; }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   -webkit-box-sizing: inherit;
           box-sizing: inherit; }
 
 body {
-  color: #F9C802;
-  background: #000; }
+  color: #f5f3ed;
+  background: #3162ce; }
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 60px;
+  margin-bottom: 80px;
+  font-size: 160px; }
+
+.list {
+  color: white;
+  font-size: 20px;
+  font-weight: 700;
+  font-family: Open Sans;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr; }
+
+.repo__element {
+  text-decoration: none;
+  color: black;
+  line-height: 30px; }
+
+.repo__item {
+  padding: 5px;
+  background: white;
+  margin: 20px;
+  width: 250px;
+  border: solid 1px black;
+  height: 50px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  .repo__item:hover {
+    background: #e6dcdc; }
 
 /*# sourceMappingURL=main.css.map */

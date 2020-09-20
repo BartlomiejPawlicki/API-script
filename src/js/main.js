@@ -19,22 +19,17 @@ if ('serviceWorker' in navigator) {
 
 console.log(`Hello world!`);
 
-const person = {
-    name: "Bartek",
-    age: 24,
-}
-
-//localStorage.setItem('person', person)
 
 
-const jsonPerson = JSON.stringify(person)
+const list = document.querySelector('.list--js')
 
+fetch('https://api.github.com/users/BartlomiejPawlicki/repos')
+    .then(resp => resp.json())
+    .then(resp => {
+        const repos = resp;
+        for (const repo of repos) {
+            const { name, html_url } = repo;
+            list.innerHTML += `<li class="repo__item"><a class="repo__element" href="${html_url}"> ${name} </a> </li>`
 
-
-//localStorage.setItem('person', jsonPerson)
-console.log(localStorage.getItem('person'))
-
-const personStringify = localStorage.getItem('person')
-
-const jsonPersone = JSON.parse(personStringify)
-console.log(jsonPersone)
+        }
+    })
